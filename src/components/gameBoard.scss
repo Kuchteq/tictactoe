@@ -1,0 +1,119 @@
+.centerGame
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gameBoard
+{
+    width: fit-content;
+    width: -moz-fit-content;
+    position: relative;
+    &>div
+    {
+        display:inline-block;
+        border:1px solid #fff;
+        cursor: pointer;
+        svg
+        {
+            transform:scale(0.8);
+            animation: scaleIn 0.4s;
+            circle, line
+            {
+                animation: colorIn 2s;
+            }
+        }
+    }
+    .claimed
+    {
+        cursor: default;
+    }
+    .end
+    {
+        display:block;
+        margin-top:-4px;
+    }
+}
+.scoreSide
+{
+    h2
+    {
+        font-size:60px;
+        padding:120px 0;
+        position: relative;
+    }
+    svg
+    {
+        position: absolute;
+        width:100%;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity:0.5
+    }
+    
+    h3
+    {
+        font-size:200px;
+        text-align:center;
+        font-weight: 100;
+        font-family: "Montserrat";
+    }
+}
+
+h4
+{
+    width:fit-content;
+    width:-moz-fit-content;
+    margin:35px auto;
+    font-size:24px;
+    transition:all 0.3s;
+    transform: translate(-26px, 0px);
+
+}
+.sinMon
+{
+    font-family: "Montserrat";   
+}
+.nextRoundShow
+{
+    opacity:1;
+}
+.hideNextRound
+{
+    opacity:0;
+}
+.resetOverlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+    cursor:pointer;
+}
+.nowToPlay
+{
+    svg 
+    {
+        line, circle
+        {
+            stroke:#ffcd00;
+        }
+    }
+}
+.toReset
+{
+    display:block;
+}
+
+@keyframes scaleIn {
+    from { transform:scale(0); }
+    to   { transform:scale(0.8); }
+}
+
+@keyframes colorIn {
+    from {     stroke: #ffcd00; }
+    to   {     stroke: #fff; }
+}

@@ -1,0 +1,233 @@
+
+.txt
+{
+    display:flex;
+    align-items:center;
+    width:fit-content;
+    width:-moz-fit-content;
+    margin:30px auto;
+    font-size:24px;
+    svg
+    {
+        width:35px;
+        margin-left:20px;
+    }
+}
+.welcome
+{
+    font-size: 30px;
+    margin:20px auto;
+    svg line, svg circle
+    {
+        stroke-width:10px;
+    }
+
+}
+.belowLine
+{
+    display:block;
+    width:20%;
+    margin:10px auto auto auto;
+    height:1px;
+    background-color: #fff;
+}
+.btnWrap
+{
+    display:flex;
+    margin:auto;
+    width:fit-content;
+    width:-moz-fit-content;
+    &> div
+    {
+        cursor: pointer;
+        display:flex;   
+        align-items: center;
+        font-size:46px;
+        padding:18px 20px;
+        border:3px solid #fff;
+        transition:0.3s all;
+        &:hover
+        {
+            border:3px solid #fff2a1;
+            color:#fff2a1;
+            
+            svg path
+            {
+                fill:#fff2a1 !important;
+              
+            }
+        }
+        svg
+        {
+            width:100px;
+            height:auto;
+            path
+            {
+                transition:0.3s all;
+            }
+        } 
+        &.selected
+        {
+            color:#ffcd00;
+            border:3px solid #ffcd00;
+            svg path
+            {
+                fill:#ffcd00 !important;
+            }
+        }    
+    }
+}
+.inputNames
+{
+    display: flex;
+    max-width: 0;
+    overflow: hidden;
+    input
+    {
+        border: 1px solid #fff;
+        background: #000;
+        font-size:20px;
+        outline:#fff;
+        color:#fff;
+        &:first-child
+        {
+            margin-right:10px;
+        }
+        &:focus
+        {
+            border: 1px solid #ffcd00;
+        }
+    }
+}
+
+
+.against 
+{
+    &> div
+    {
+    width:320px;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    padding:0 10px;
+    &:first-child 
+    {
+        margin-right:35px;
+        svg
+        {
+            transform:translate(-5px, 8px);
+        }
+    }
+    span
+    {
+        max-width: 100%;
+        overflow: hidden;
+        transition:all 0.3s;
+    }
+    }
+    .smaled
+    {
+        width:100px;
+        span
+        {
+            max-width: 0%;
+        }
+    }
+    .larged
+    {
+        width:640px;
+        span
+        {
+            max-width: 0%;
+        }
+        .inputNames
+        {
+            max-width: 100%;
+        }
+    }
+}
+.boardWhich > div
+{
+    
+    &:first-child 
+    {
+        margin-right:35px;
+    }
+}
+.sizeWhich > div
+{
+    margin-right:35px;
+    &:last-child
+    {
+        margin-right:0;
+    }
+}
+.btnWrap .playGameBut
+{
+    padding:22px 80px;
+    margin-top:60px;
+    svg
+    {
+        width: 50px;
+        margin-left:15px;
+    }
+}
+.btnWrap.aiBtns
+{
+    &>div
+    {
+        font-size:20px;
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+}
+.sizeSection
+{
+    max-height: 300px;
+    overflow: hidden;
+}
+
+main section
+{
+    transition: all 200ms;
+}
+
+
+.sizeAppear-enter {
+    opacity: 0;
+    max-height: 0px;
+  }
+  .sizeAppear-enter-active {
+    opacity: 1;
+    max-height: 300px;
+  }
+  .sizeAppear-exit {
+    opacity: 1;
+    max-height: 300px;
+  }
+  .sizeAppear-exit-active {
+    opacity: 0;
+    max-height: 0px;
+  }
+  
+  .playSection
+  {
+      transition: all 0.3s;
+  }
+
+  .playAppear-enter {
+    opacity: 0;
+    transform:scale(0);
+  }
+  .playAppear-enter-active {
+    opacity: 1;
+    transform:scale(1);
+  }
+  .playAppear-exit {
+    opacity: 1;
+    transform:scale(1);
+  }
+  .playAppear-exit-active {
+    opacity: 0;
+    transform:scale(0);
+  }
